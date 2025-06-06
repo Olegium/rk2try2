@@ -33,22 +33,9 @@ enable_testing()
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-add_executable(observerTest tests/test_observer.cpp)
-target_link_libraries(observerTest gtest_main observer_lib)
-
-add_test(NAME observerTest COMMAND observerTest)
-
-add_executable(subjectTest tests/test_subject.cpp)
+add_executable(subjectTest CommandPatternTests.cpp)
 target_link_libraries(subjectTest gtest_main observer_lib)
 add_test(NAME subjectTest COMMAND subjectTest)
-
-add_executable(weatherDataTest tests/weatherData.cpp)
-target_link_libraries(weatherDataTest gtest_main observer_lib)
-add_test(NAME weatherDataTest COMMAND weatherDataTest)
-
-add_executable(ConcreteobserverTest tests/Concreteobserver.cpp)
-target_link_libraries(ConcreteobserverTest gtest_main observer_lib)
-add_test(NAME ConcreteobserverTest COMMAND ConcreteobserverTest)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_NAME "observer-pattern")
