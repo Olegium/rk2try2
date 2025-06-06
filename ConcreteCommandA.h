@@ -8,5 +8,5 @@ public:
     virtual void execute() const override;
 
 private:
-    IReciever *m_receiver;
+    IReceiver *m_receiver;
 };
