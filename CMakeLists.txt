@@ -6,8 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 Static library for Command pattern classes
 
-add_library(command_pattern STATIC ConcreteCommandA.cpp ConcreteCommandB.cpp ConcreteReceiverX.cpp ConcreteReceiverY.cpp Invoker.cpp )
-
+add_library(command_pattern STATIC
+    ConcreteCommandA.cpp
+    ConcreteCommandB.cpp
+    ConcreteReceiverX.cpp
+    ConcreteReceiverY.cpp
+    Invoker.cpp
+)
 Specify include directories for the library
 
 target_include_directories(command_pattern PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
