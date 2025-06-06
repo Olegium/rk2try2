@@ -1,6 +1,6 @@
 #include "ConcreteCommandA.h"
 
-ConcreteCommandA::ConcreteCommandA(IReceiver *receiver) : m_receiever(receiver){}
+ConcreteCommandA::ConcreteCommandA(IReceiver *receiver) : m_receiver(receiver){}
 
 void ConcreteCommandA::execute() const
 {
