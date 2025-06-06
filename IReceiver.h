@@ -1,8 +1,8 @@
 #pragma once
 
-class IReciever
+class IReceiver
 {
 public:
-    virtual ~IReciever() {}
+    virtual ~IReceiver() {}
     virtual void performTask() const = 0;
 };
