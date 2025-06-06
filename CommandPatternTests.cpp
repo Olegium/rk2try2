@@ -9,12 +9,18 @@
 #include "IReceiver.h"
 
 // MockReceiver for testing commands
+//class MockReceiver : public IReceiver {
+//public:
+    //bool taskPerformed = false;
+  //  void performTask() const override { taskPerformed = true; }
+//};
 class MockReceiver : public IReceiver {
 public:
-    bool taskPerformed = false;
     void performTask() const override { taskPerformed = true; }
+    bool wasTaskPerformed() const { return taskPerformed; }
+private:
+    mutable bool taskPerformed = false; // Add 'mutable' here
 };
-
 // MockCommand for testing Invoker
 class MockCommand : public ICommand {
 public:
