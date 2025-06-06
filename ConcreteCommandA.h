@@ -4,9 +4,9 @@
 class ConcreteCommandA : public ICommand
 {
 public:
-    ConcreteCommandA(IReciever * reciever);
+    ConcreteCommandA(IReceiver * receiver);
     virtual void execute() const override;
 
 private:
-    IReciever *m_reciever;
+    IReciever *m_receiver;
 };
