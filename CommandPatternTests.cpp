@@ -41,7 +41,7 @@ TEST(ConcreteCommandBTest, ExecuteCallsReceiver) {
 // Assuming it has a getTaskCount() method that increments with each performTask() call
 TEST(ConcreteReceiverXTest, PerformTaskIncrementsCount) {
     ConcreteReceiverX receiver;
-    int initialCount = receiver.getTaskCount();
+    int initialCount = IReceiver.getTaskCount();
     receiver.performTask();
     EXPECT_EQ(receiver.getTaskCount(), initialCount + 1);
 }
@@ -49,8 +49,8 @@ TEST(ConcreteReceiverXTest, PerformTaskIncrementsCount) {
 // Test for ConcreteReceiverY
 // Assuming it has a getTaskCount() method that increments with each performTask() call
 TEST(ConcreteReceiverYTest, PerformTaskIncrementsCount) {
-    ConcreteReceiverY receiver;
-    int initialCount = receiver.getTaskCount();
+    ConcreteRecieverY receiver;
+    int initialCount = IReceiver.getTaskCount();
     receiver.performTask();
     EXPECT_EQ(receiver.getTaskCount(), initialCount + 1);
 }
@@ -59,8 +59,8 @@ TEST(ConcreteReceiverYTest, PerformTaskIncrementsCount) {
 // Assuming it has setCommand(ICommand*) and confirm() methods
 TEST(InvokerTest, ConfirmExecutesCommand) {
     MockCommand command;
-    Invoker invoker;
-    invoker.setCommand(&command);
+    IInvoker invoker;
+    IInvoker.setCommand(&command);
     invoker.confirm();
     EXPECT_TRUE(command.executed);
 }
