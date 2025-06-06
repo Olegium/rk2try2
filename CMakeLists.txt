@@ -4,8 +4,6 @@ project(CommandPattern CXX)
 set(CMAKE_CXX_STANDARD 11) 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-Static library for Command pattern classes
-
 add_library(command_pattern STATIC
     ConcreteCommandA.cpp
     ConcreteCommandB.cpp
