@@ -11,6 +11,7 @@ add_library(command_pattern STATIC
     ConcreteReceiverY.cpp
     Invoker.cpp
 )
+
 Specify include directories for the library
 
 target_include_directories(command_pattern PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
