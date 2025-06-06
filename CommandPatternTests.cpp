@@ -11,7 +11,7 @@
 // MockReceiver for testing commands
 class MockReceiver : public IReceiver {
 public:
-    mutable bool taskPerformed = false;
+    bool taskPerformed = false;
     void performTask() override { taskPerformed = true; }
 };
 
