@@ -12,14 +12,14 @@
 class MockReceiver : public IReceiver {
 public:
     mutable bool taskPerformed = false;
-    void performTask() const override { taskPerformed = true; }
+    void performTask() override { taskPerformed = true; }
 };
 
 // MockCommand for testing Invoker
 class MockCommand : public ICommand {
 public:
     bool executed = false;
-    void execute() override { executed = true; }
+    void execute() const override { executed = true; }
 };
 
 TEST(ConcreteCommandATest, ExecuteCallsReceiver) {
