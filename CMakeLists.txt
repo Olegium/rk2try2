@@ -5,10 +5,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(command_pattern STATIC
-    ConcreteCommandA.cpp
-    ConcreteCommandB.cpp
-    ConcreteReceiverX.cpp
-    ConcreteReceiverY.cpp
+    src/ConcreteCommandA.cpp
+    src/ConcreteCommandB.cpp
+    src/ConcreteReceiverX.cpp
+    src/ConcreteReceiverY.cpp
     Invoker.cpp
 )
 
