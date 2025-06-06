@@ -7,6 +7,6 @@ public:
     ConcreteCommandA(IReceiver * receiver);
     virtual void execute() const override;
 
-private:
+public:
     IReceiver* m_receiver;
 };
