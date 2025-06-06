@@ -3,6 +3,6 @@
 class IReceiver
 {
 public:
-    virtual ~IReceiver() {}
+    virtual ~IReceiver() = default;
     virtual void performTask() const = 0;
 };
