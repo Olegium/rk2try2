@@ -2,6 +2,8 @@
 #include "ConcreteCommandB.h"
 #include "ConcreteReceiverX.h"
 #include "ConcreteReceiverY.h"
+#include "ConcreteCommandA.h"
+
 #include "Invoker.h"
 #include "ICommand.h"
 #include "IReceiver.h"
