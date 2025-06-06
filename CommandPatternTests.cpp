@@ -20,6 +20,13 @@ public:
     void execute() override { executed = true; }
 };
 
+TEST(ConcreteCommandATest, ExecuteCallsReceiver) {
+    MockReceiver receiver;
+    ConcreteCommandA command(&receiver);
+    command.execute();
+    EXPECT_TRUE(receiver.taskPerformed);
+}
+
 // Test for ConcreteCommandB
 TEST(ConcreteCommandBTest, ExecuteCallsReceiver) {
     MockReceiver receiver;
