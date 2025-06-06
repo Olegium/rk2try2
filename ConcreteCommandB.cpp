@@ -1,11 +1,11 @@
 #include "ConcreteCommandB.h"
 
-ConcreteCommandB::ConcreteCommandB(IReciever *reciever) : m_reciever(reciever){}
+ConcreteCommandB::ConcreteCommandB(IReceiver *receiver) : m_receiver(receiver){}
 
 void ConcreteCommandB::execute() const
 {
-    if (m_reciever)
+    if (m_receiver)
     {
-        m_reciever->performTask();
+        m_receiver->performTask();
     }
 }
