@@ -1,4 +1,4 @@
-#include "IReciever.h"
+#include "IReceiver.h"
 
 class ConcreteRecieverY : public IReciever
 {
