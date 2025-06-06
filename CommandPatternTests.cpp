@@ -12,14 +12,14 @@
 class MockReceiver : public IReceiver {
 public:
     bool taskPerformed = false;
-    void performTask() override { taskPerformed = true; }
+    void performTask() const override { taskPerformed = true; }
 };
 
 // MockCommand for testing Invoker
 class MockCommand : public ICommand {
 public:
     mutable bool executed = false;
-    void execute() override { executed = true; }
+    void execute() const override { executed = true; }
 };
 
 TEST(ConcreteCommandATest, ExecuteCallsReceiver) {
@@ -41,7 +41,7 @@ TEST(ConcreteCommandBTest, ExecuteCallsReceiver) {
 // Assuming it has a getTaskCount() method that increments with each performTask() call
 TEST(ConcreteReceiverXTest, PerformTaskIncrementsCount) {
     ConcreteReceiverX receiver;
-    int initialCount = IReceiver.getTaskCount();
+    int initialCount = receiver.getTaskCount();
     receiver.performTask();
     EXPECT_EQ(receiver.getTaskCount(), initialCount + 1);
 }
@@ -50,7 +50,7 @@ TEST(ConcreteReceiverXTest, PerformTaskIncrementsCount) {
 // Assuming it has a getTaskCount() method that increments with each performTask() call
 TEST(ConcreteReceiverYTest, PerformTaskIncrementsCount) {
     ConcreteRecieverY receiver;
-    int initialCount = IReceiver.getTaskCount();
+    int initialCount = receiver.getTaskCount();
     receiver.performTask();
     EXPECT_EQ(receiver.getTaskCount(), initialCount + 1);
 }
