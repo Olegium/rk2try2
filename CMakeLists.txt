@@ -8,7 +8,7 @@ add_library(command_pattern STATIC
     src/ConcreteCommandA.cpp
     src/ConcreteCommandB.cpp
     ConcreteReceiverX.cpp
-    src/ConcreteReceiverY.cpp
+    ConcreteReceiverY.cpp
     Invoker.cpp
 )
 
