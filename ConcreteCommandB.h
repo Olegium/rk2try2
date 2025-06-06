@@ -1,5 +1,5 @@
 #include "ICommand.h"
-#include "IReciever.h"
+#include "IReceiver.h"
 
 class ConcreteCommandB : public ICommand
 {
