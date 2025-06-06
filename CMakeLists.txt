@@ -12,7 +12,7 @@ add_library(command_pattern STATIC
     Invoker.cpp
 )
 
-Specify include directories for the library
+#Specify include directories for the library
 target_include_directories(command_pattern PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(command_demo main.cpp)
