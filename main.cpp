@@ -1,8 +1,8 @@
 #include "Invoker.h"
 #include "ConcreteCommandA.h"
 #include "ConcreteCommandB.h"
-#include "ConcreteRecieverX.h"
-#include "ConcreteRecieverY.h"
+#include "ConcreteReceiverX.h"
+#include "ConcreteReceiverY.h"
 
 int main()
 {
