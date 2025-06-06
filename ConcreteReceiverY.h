@@ -1,6 +1,6 @@
 #include "IReceiver.h"
 
-class ConcreteRecieverY : public IReciever
+class ConcreteRecieverY : public IReceiver
 {
 public:
     ConcreteRecieverY() = default;
