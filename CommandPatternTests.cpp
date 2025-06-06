@@ -18,8 +18,8 @@ public:
 // MockCommand for testing Invoker
 class MockCommand : public ICommand {
 public:
-    bool executed = false;
-    void execute() const override { executed = true; }
+    mutable bool executed = false;
+    void execute() override { executed = true; }
 };
 
 TEST(ConcreteCommandATest, ExecuteCallsReceiver) {
