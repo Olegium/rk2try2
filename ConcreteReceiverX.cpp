@@ -1,4 +1,4 @@
-#include "ConcreteRecieverX.h"
+#include "ConcreteReceiverX.h"
 
 #include <iostream>
 
